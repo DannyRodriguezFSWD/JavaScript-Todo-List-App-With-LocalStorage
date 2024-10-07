@@ -1,0 +1,143 @@
+body {
+    background: #1d2630;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2rem 1rem;
+    max-width: 720px;
+    margin: 0 auto;
+    min-height: 100vh;
+  }
+
+  #form-error {
+    color: #b33030;
+    position: absolute;
+    bottom: -32px;
+    left: 0;
+    font-weight: 700;
+  }
+  .new-note{
+    margin-bottom: 1rem;
+    background: white;
+    border: 1px solid #dadada;
+    border-radius: .5rem;
+    padding: 1rem;
+    position: relative;
+  }
+  .new-note input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 0 0 .5em;
+  }
+  .new-note textarea {
+    display: block;
+    width: 100%;
+    min-height: 4rem;
+    border: none;
+    resize:none;
+    background: transparent;
+    outline: none;
+    padding: 0;
+  }
+  .button-container {
+    display:flex;
+    justify-content: center;
+    margin-bottom:3rem;
+  }
+  .add-btn {
+    background: #439c43;
+    border-radius: .5em;
+    cursor: pointer;
+    padding: 1em 5em;
+    border: none;
+    color: white;
+  }
+  .add-btn:hover {
+    opacity: .8;
+  }
+  #notes-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .note {
+    position: relative;
+    overflow: hidden;
+    background: white;
+    border: 1px solid #dadada;
+    border-radius: 6px;
+    padding: 1.2em;
+  }
+  .note > *[contentEditable='true'] {
+    color: #5f5f5f;
+    width: 100%;
+    outline: none;
+  }
+  .note-title {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    display: inline-block;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+  }
+  .note-title:last-child {
+    margin-bottom: 0;
+  }
+  .note-text {
+    margin-bottom: 1.6rem;
+    background: white;
+    width: 100%;
+    overflow-wrap: pre-wrap;
+    overflow: hidden;
+  }
+  .note-date {
+    font-size: .75em;
+    text-align: right;
+    border-top: 1px solid #dadada;
+    padding-top: 1.6rem;
+    width: 100%;
+    margin-top: auto;
+  }
+  .note-controls {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: white;
+    font-size: .75rem;
+    column-gap: .8rem;
+    padding: 1em;
+    display: flex;
+    opacity: 0;
+    transition: opacity 350ms;
+  }
+  .note:hover ,.note-controls:hover, .note-controls:focus-within {
+    opacity: 1;
+  }
+  .note-controls button {
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: .5rem;
+  }
+  .note-controls button:hover {
+    filter: brightness(0.85);
+  }
+  .note-delete {
+    color: #bb0000;
+  }
+  .note-edit {
+    color: #00bb00;
+  }
+  .note-save {
+    color: #0000bb;
+  }
+  .note-save[disabled='true'] {
+    color: #dfdfdf;
+    pointer-events: none;
+    user-select: none;
+    cursor: not-allowed;
+  }

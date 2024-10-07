@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="https://avatars.githubusercontent.com/u/10655332?s=400&u=cc3d1b549c53e1e1d6b1211c1386fe3142d653aa&v=4">
+    <title>Todo List App</title>
+</head>
+<body>
+    <div class="new-note">
+        <input type="text" name="title" id="title" placeholder="Title">
+        <textarea name="content" id="content" placeholder="Write the description"></textarea>
+        <div id="form-error"></div>
+    </div>
+    <div class="button-container">
+        <button class="add-btn" onclick="addNote()">Add Note</button>
+    </div>
+    <div id="notes-wrapper"></div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
